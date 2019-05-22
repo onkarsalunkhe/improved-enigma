@@ -1,0 +1,38 @@
+! PROGRAM TO CALCULATE NUMBER OF POSSIBLE COMBINATIONS OF DIVIDING N STUDENTS 
+! IN GROUPS OF M AND (N-M) 
+      
+      PROGRAM MAIN
+      
+      IMPLICIT NONE
+      
+      INTEGER N,M,K, FACTN,FACTM,FACTMN ,COMB
+      
+      FACTN=1
+      FACTM=1
+      FACTMN= 1
+      K=1
+      
+      WRITE(6,*) 'TOTAL NUMBER OF STUDENTS'
+      
+      READ*, N
+      
+      WRITE(6,*) 'NUMBER OF STUDENTS IN ONE GROUP'
+      
+      READ*,M
+      
+      WRITE(6,*) 'NUMBER OF STUDENTS IN ANOTHER GROUP =', M-N
+      
+      DO 100 K=1,N,1
+100   FACTN= FACTN*K
+ 
+      DO 200 K=1,M,1
+200   FACTM = FACTM*K
+
+      DO 300 K=1,N-M,1
+300   FACTMN = FACTMN*K 
+
+      COMB = FACTN/(FACTM*FACTMN)
+      
+      WRITE(6,*) 'POSSIBLE NUMBER OF COMBINATIONS ARE', COMB
+      
+      END

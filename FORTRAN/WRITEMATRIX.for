@@ -1,0 +1,4 @@
+
+
+WRITE(6,*) 'PTDIS(', IADIS,')=',PTDIS(IADIS)
+
