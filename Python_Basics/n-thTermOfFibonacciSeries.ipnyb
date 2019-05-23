@@ -1,0 +1,9 @@
+# Program to find n-th number of fibo series
+
+def fibo(n):
+    if (n==0): return 0
+    elif (n==1):return 1
+    else:
+        val = fibo (n-1) + fibo (n-2)
+        return val
+print(fibo(int(input('fibonacci series term at  '))))
